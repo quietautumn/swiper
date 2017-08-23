@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        #container{
+            width: 720px;
+            margin: 60px auto;
+            overflow: hidden;
+        }
+        #control{
+            text-align: center;
+        }
+        #control a{
+            margin: 6px;
+            display: inline-block;
+            width: 20px;
+            height: 4px;
+            background: gray;
+        }
+        #control .active{
+            background: palevioletred;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <img id="img" src="img/weekbg1.png" >
+    <div id="control"></div>
+</div>
+</body>
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/data.js"></script>
+<script>
+    $('#container').pluginName({
+        "container":"#container",
+        "control":"#control",
+        "img":"#img",
+        "data":data,
+        "time":2000,
+        "index":0,
+        "withhover":true
+    })
+</script>
+</html>
