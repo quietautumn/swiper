@@ -29,6 +29,10 @@
         }
         if (config.withhover){
             $(config.control+ " a").hover(function () {
+                index = $(this).index()
+                imgcontainer.attr('src',data[index].pic);
+                $(config.control+ " a").removeClass('active');
+                $(config.control+ " a").eq(index).addClass('active');
                 stop()
             });
             $(config.control+ " a").mouseleave(function () {
